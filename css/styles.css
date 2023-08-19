@@ -62,7 +62,7 @@ body {
 
 .main-grid {
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-columns: clamp(7.5rem, 20vw, 15rem) 1fr;
   gap: 5vw;
   grid-auto-flow: dense;
   align-items: center;
@@ -71,6 +71,7 @@ body {
 }
 
 main {
+  padding-block: 2rem;
   grid-column: 2;
   width: calc(100vw - 15rem - 5vw);
 }
@@ -78,6 +79,8 @@ main {
 aside {
   grid-column: 1;
   align-self: stretch;
+  display: flex;
+  justify-content: end;
 }
 
 .eyebrow {
@@ -106,7 +109,8 @@ aside {
   gap: 1rem;
   grid-auto-flow: column;
   overflow-x: auto;
-  padding-bottom: 2rem;
+  position: relative;
+  padding-block: 2rem;
   scrollbar-color: var(--clr-accent-400) var(--clr-primary-800);
 }
 
@@ -124,6 +128,12 @@ aside {
   border-radius: 100vw;
 }
 
+.job-experience::after {
+  content: '';
+  width: 50px;
+  background: transparent;
+}
+
 .job {
   width: 29rem;
   border-radius: 0.25rem;
@@ -133,6 +143,14 @@ aside {
 
 .job * {
   margin: 0;
+}
+
+.job:first-child::before {
+content: 'Current role';
+position: absolute;
+color: var(--clr-accent-400);
+top: 0rem;
+left: 0;
 }
 
 .year {
@@ -167,7 +185,6 @@ aside {
   border-left: 1px solid var(--clr-primary-300);
   padding: 0;
   margin: 0;
-  margin-left: clamp(3rem, 10vw, 10rem );
   list-style: none;
   display: grid;
   align-content: center;
