@@ -70,6 +70,8 @@ body {
   min-height: 100dvh;
 }
 
+
+
 main {
   padding-block: 2rem;
   grid-column: 2;
@@ -91,6 +93,8 @@ aside {
   letter-spacing: 0.2em;
   margin: 0;
 }
+
+
 
 .page-title {
   font-size: var(--fs-700);
@@ -146,7 +150,7 @@ aside {
 }
 
 .job:first-child::before {
-content: 'Current role';
+content: 'Опыт работы';
 position: absolute;
 color: var(--clr-accent-400);
 top: 0rem;
