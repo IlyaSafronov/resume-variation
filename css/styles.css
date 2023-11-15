@@ -60,6 +60,16 @@ body {
   width: 1px;
 }
 
+.link {
+  text-decoration: none;
+  color: brown;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: aqua;
+}
+
 .main-grid {
   display: grid;
   grid-template-columns: clamp(7.5rem, 20vw, 15rem) 1fr;
@@ -212,7 +222,7 @@ aside {
 }
 
 .job:first-child::before {
-content: 'Опыт работы';
+content: 'Опыт работы и образование';
 position: absolute;
 color: var(--clr-accent-400);
 top: 0rem;
@@ -243,7 +253,6 @@ left: 0;
   color: var(--clr-primary-200);
   font-size: var(--fs-300);
   font-weight: var(--fw-bold);
-  text-transform: uppercase;
 }
 
 .icon-list {
