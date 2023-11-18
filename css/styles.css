@@ -66,6 +66,10 @@ body {
   font-weight: bold;
 }
 
+p {
+  text-indent: 20px;
+}
+
 .link:hover {
   color: aqua;
 }
